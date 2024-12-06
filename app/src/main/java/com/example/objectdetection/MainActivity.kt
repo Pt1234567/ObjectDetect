@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
                     x=index
                     x*=4
                     if(fl > 0.5){
-                        paint.setColor(colors.get(index))
+                        paint.setColor(colors.get(index%colors.size))
                         paint.style=Paint.Style.STROKE
                         canvas.drawRect(RectF(locations.get(x+1)*w,locations.get(x)*h,locations.get(x+3)*w,locations.get(x+2)*h),paint)
                         paint.style=Paint.Style.FILL
